@@ -9,53 +9,53 @@ const Navigation: React.FC = () => {
     <nav className="nav-container">
       <div className="nav-content">
         <Link to="/" className="nav-logo">
-          Jacob Mammen
+          Jacob Mammen Jacob
         </Link>
         <div className={`nav-links ${isOpen ? "open" : ""}`}>
           <Link to="/" className="nav-link" onClick={() => setIsOpen(false)}>
-            Home
+            HOME
           </Link>
           <Link
             to="/about"
             className="nav-link"
             onClick={() => setIsOpen(false)}
           >
-            About
+            ABOUT
           </Link>
           <Link
             to="/skills"
             className="nav-link"
             onClick={() => setIsOpen(false)}
           >
-            Skills
+            SKILLS
           </Link>
           <Link
             to="/experience"
             className="nav-link"
             onClick={() => setIsOpen(false)}
           >
-            Experience
+            EXPERIENCE
           </Link>
           <Link
             to="/education"
             className="nav-link"
             onClick={() => setIsOpen(false)}
           >
-            Education
+            EDUCATION
           </Link>
           <Link
             to="/projects"
             className="nav-link"
             onClick={() => setIsOpen(false)}
           >
-            Projects
+            PORTFOLIO
           </Link>
           <Link
             to="/contact"
             className="nav-link"
             onClick={() => setIsOpen(false)}
           >
-            Contact
+            CONTACT
           </Link>
         </div>
         <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>

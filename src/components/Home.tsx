@@ -14,13 +14,9 @@ const Home: React.FC = () => {
       }
     >
       <div className="hero-content">
-        <h1 className="hero-title">Jacob Mammen</h1>
-        <h2 className="hero-subtitle">Full Stack Developer</h2>
-        <p className="hero-description">
-          Passionate about creating innovative digital solutions with modern
-          technologies. Experienced in building scalable web applications and
-          delivering exceptional user experiences.
-        </p>
+        <h2 className="hero-greeting">Hello, I'm</h2>
+        <h1 className="hero-title">Jacob Mammen Jacob</h1>
+        <h3 className="hero-subtitle">AND THIS IS MY RESUME</h3>
         <div className="hero-buttons">
           <Link to="/projects" className="hero-button primary">
             View My Work
