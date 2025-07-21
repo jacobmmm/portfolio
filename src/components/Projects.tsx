@@ -1,63 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/Projects.css";
 
 const Projects: React.FC = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [currentProject, setCurrentProject] = useState<any>(null);
+
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Asset Finance Platform",
       description:
-        "A full-stack e-commerce platform with user authentication, payment integration, and admin dashboard.",
-      tech: ["React", "Node.js", "MongoDB", "Stripe", "JWT"],
-      icon: "🛒",
+        "Built fullstack React/Node.js app with MongoDB and login/session handling.",
+      tech: ["React", "NodeJS", "ExpressJS", "MongoDB"],
+      icon: "💰",
       liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      title: "Task Management App",
-      description:
-        "A collaborative task management application with real-time updates and team collaboration features.",
-      tech: ["React", "TypeScript", "Socket.io", "Express", "PostgreSQL"],
-      icon: "📋",
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      title: "Weather Dashboard",
-      description:
-        "A responsive weather dashboard with location-based forecasts and interactive charts.",
-      tech: ["React", "Chart.js", "OpenWeather API", "CSS3"],
-      icon: "🌤️",
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      title: "Social Media App",
-      description:
-        "A social media platform with real-time messaging, photo sharing, and friend connections.",
-      tech: ["React Native", "Firebase", "Redux", "Expo"],
-      icon: "📱",
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      title: "Analytics Dashboard",
-      description:
-        "A business analytics dashboard with interactive data visualizations and reporting features.",
-      tech: ["React", "D3.js", "Python", "Django", "PostgreSQL"],
-      icon: "📊",
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      title: "Booking System",
-      description:
-        "An online booking system for appointments with calendar integration and email notifications.",
-      tech: ["Next.js", "Prisma", "MySQL", "NextAuth", "Tailwind"],
-      icon: "📅",
-      liveUrl: "#",
-      githubUrl: "#",
+      frontendUrl:
+        "https://github.com/jacobmmm/asset-finance-specialist-front-end/tree/main/asset-finance-specialist-front-end",
+      backendUrl:
+        "https://github.com/jacobmmm/asset-finance-specialist-backend",
     },
   ];
+
+  const handleGitHubClick = (project: any) => {
+    setCurrentProject(project);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setCurrentProject(null);
+  };
 
   return (
     <section className="projects-container">
@@ -86,20 +57,55 @@ const Projects: React.FC = () => {
                   >
                     Live Demo
                   </a>
-                  <a
-                    href={project.githubUrl}
-                    className="project-link secondary"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => handleGitHubClick(project)}
+                    className="project-link secondary github-button"
                   >
                     GitHub
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* GitHub Options Modal */}
+      {showModal && currentProject && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <h3>{currentProject.title}</h3>
+              <button className="close-button" onClick={closeModal}>
+                ×
+              </button>
+            </div>
+            <div className="modal-body">
+              <p>Choose which repository to view:</p>
+              <div className="modal-buttons">
+                <a
+                  href={currentProject.frontendUrl}
+                  className="modal-link primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={closeModal}
+                >
+                  Frontend Code
+                </a>
+                <a
+                  href={currentProject.backendUrl}
+                  className="modal-link secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={closeModal}
+                >
+                  Backend Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
