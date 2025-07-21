@@ -31,12 +31,7 @@ const Contact: React.FC = () => {
       <h2 className="section-title">Get In Touch</h2>
       <div className="contact-content">
         <div className="contact-info">
-          <h3>Let's Work Together</h3>
-          <p>
-            I'm always interested in new opportunities and exciting projects.
-            Whether you have a project in mind or just want to chat about
-            technology, feel free to reach out!
-          </p>
+          <h3>My Contact Details</h3>
 
           <div className="contact-item">
             <div className="icon">📧</div>
