@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/About.css";
+import profileImage from "../Jacob-portfolio-background.jpg";
 
 const About: React.FC = () => {
   return (
@@ -8,23 +9,17 @@ const About: React.FC = () => {
         <div className="about-text">
           <h2>About Me</h2>
           <p>
-            I'm a passionate Full Stack Developer with a strong foundation in
-            modern web technologies. I love creating digital experiences that
-            are not only functional but also beautiful and intuitive.
+            Full Stack Engineer with robust experience in building
+            cloud-deployed web applications using React, TypeScript, Node.js,
+            and foundational experience in C# and .NET Core Python Flask.
+            Skilled in RESTful API development, SQL and NoSQL databases, and
+            deploying scalable backend services on AWS and Google Cloud.
+            Demonstrates a strong understanding of testing, CI/CD, and agile
+            delivery processes. Proven ability to work collaboratively in Agile
+            teams and communicate effectively with stakeholders.
           </p>
-          <p>
-            With expertise in both frontend and backend development, I enjoy
-            working on complex problems and turning ideas into reality. I'm
-            constantly learning and adapting to new technologies to stay at the
-            forefront of web development.
-          </p>
-          <p>
-            When I'm not coding, you can find me exploring new places, trying
-            out new technologies, or contributing to open-source projects. I
-            believe in continuous learning and sharing knowledge with the
-            developer community.
-          </p>
-          <div className="stats">
+
+          {/* <div className="stats">
             <div className="stat">
               <h3>3+</h3>
               <p>Years Experience</p>
@@ -37,10 +32,10 @@ const About: React.FC = () => {
               <h3>20+</h3>
               <p>Technologies</p>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="about-image">
-          <img src="/placeholder-avatar.jpg" alt="Jacob Mammen" />
+          <img src={profileImage} alt="Jacob Mammen" />
         </div>
       </div>
     </section>

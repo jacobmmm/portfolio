@@ -37,6 +37,13 @@ const Navigation: React.FC = () => {
             Experience
           </Link>
           <Link
+            to="/education"
+            className="nav-link"
+            onClick={() => setIsOpen(false)}
+          >
+            Education
+          </Link>
+          <Link
             to="/projects"
             className="nav-link"
             onClick={() => setIsOpen(false)}

@@ -4,58 +4,50 @@ import "../css/Experience.css";
 const Experience: React.FC = () => {
   const experiences = [
     {
-      title: "Senior Full Stack Developer",
-      company: "TechCorp Solutions",
-      date: "2022 - Present",
+      title: "Software Engineer",
+      company: "Inflamed – Melbourne, Australia",
+      date: "Jan 2025 – Present",
       description:
-        "Leading development of enterprise web applications using React, Node.js, and cloud technologies.",
+        "Delivering full-stack solutions using modern technologies and improving system performance.",
       highlights: [
-        "Led a team of 5 developers in building scalable web applications",
-        "Implemented microservices architecture reducing response time by 40%",
-        "Mentored junior developers and conducted code reviews",
+        "Delivered front-end features using React (16+), TypeScript, Redux, and Material UI, improving responsiveness by 30%",
+        "Developed backend APIs using Google Cloud Functions and TypeScript, improving performance by 20%",
+        "Set up development environments by cloning repositories, installing project dependencies, and analyzing package.json scripts reducing onboarding time for new developers by 30%",
+        "Implemented server-side rendering with Next.js, reducing initial page load times",
+        "Integrated third-party services (Stripe, Slack, Jira) for process automation",
+        "Collaborated closely with internal teams in an Agile environment and contributed to bi-weekly sprint releases",
       ],
     },
     {
-      title: "Full Stack Developer",
-      company: "Digital Innovations Ltd",
-      date: "2020 - 2022",
+      title: "Software Engineer",
+      company: "SMOVER Technologies – Remote",
+      date: "Aug 2024 – Sep 2024",
       description:
-        "Developed and maintained multiple client projects using modern web technologies.",
+        "Focused on React.js development and optimizing development workflows.",
       highlights: [
-        "Built responsive web applications serving 10k+ daily active users",
-        "Integrated payment gateways and third-party APIs",
-        "Optimized application performance improving load times by 60%",
+        "Created and maintained reusable React.js components, speeding up development cycles",
+        "Improved load times using Next.js server-side rendering",
+        "Participated in sprint planning, reviews, and retrospectives to ensure alignment with client requirements",
+        "Configured clean development setups across multiple projects, resolving over 10+ dependency issues and ensuring builds ran smoothly across environments—accelerated development setup for team members by 25%",
       ],
     },
     {
-      title: "Frontend Developer",
-      company: "StartupXYZ",
-      date: "2019 - 2020",
+      title: "Software Test Engineer",
+      company: "Tech Mahindra – Bangalore, India",
+      date: "Oct 2016 – Jul 2022",
       description:
-        "Focused on creating intuitive user interfaces and improving user experience.",
+        "Performed comprehensive testing of mobile applications and contributed to QA process improvements.",
       highlights: [
-        "Developed reusable React components library",
-        "Collaborated with UX/UI designers to implement pixel-perfect designs",
-        "Implemented automated testing reducing bugs by 30%",
-      ],
-    },
-    {
-      title: "Computer Science Degree",
-      company: "University of Technology",
-      date: "2015 - 2019",
-      description:
-        "Bachelor of Science in Computer Science with focus on Software Engineering.",
-      highlights: [
-        "Graduated with First Class Honours",
-        "Specialized in Web Technologies and Database Systems",
-        "Final year project: AI-powered web application",
+        "Performed manual and automated testing of mobile applications, ensuring cross-device compatibility and user satisfaction",
+        "Worked closely with development teams to ensure smooth issue resolution and delivery",
+        "Delivered test plans, bug reports, and contributed to improving QA processes",
       ],
     },
   ];
 
   return (
     <section className="experience-container">
-      <h2 className="section-title">Experience & Education</h2>
+      <h2 className="section-title">Professional Experience</h2>
       <div className="timeline">
         {experiences.map((exp, index) => (
           <div
