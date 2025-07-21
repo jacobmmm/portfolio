@@ -18,10 +18,10 @@ const Home: React.FC = () => {
         <h1 className="hero-title">Jacob Mammen Jacob</h1>
         <h3 className="hero-subtitle">AND THIS IS MY RESUME</h3>
       </div>
-      <div className="scroll-indicator">
+      <Link to="/about" className="scroll-indicator">
         <span className="scroll-text">Scroll to explore</span>
         <div className="scroll-arrow"></div>
-      </div>
+      </Link>
     </section>
   );
 };

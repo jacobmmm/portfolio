@@ -25,7 +25,7 @@
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
               var(--background-image);
-  background-size: cover;
+  background-size: 60%;
   background-position: center;
   background-attachment: fixed;
   display: flex;
@@ -130,6 +130,24 @@
   flex-direction: column;
   align-items: center;
   animation: bounce 2s infinite;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll-indicator:hover {
+  transform: translateX(-50%) translateY(-5px);
+  opacity: 1;
+}
+
+.scroll-indicator:hover .scroll-text {
+  opacity: 1;
+}
+
+.scroll-indicator:hover .scroll-arrow {
+  opacity: 1;
+  border-color: #00d4ff;
 }
 
 .scroll-text {
