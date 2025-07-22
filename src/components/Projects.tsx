@@ -31,7 +31,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section className="projects-container">
+    <section id="projects" className="projects-container">
       <div className="projects-content">
         <h2 className="section-title">Featured Projects</h2>
         <div className="projects-grid">

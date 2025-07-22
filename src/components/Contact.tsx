@@ -20,18 +20,21 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     console.log("Form submitted:", formData);
-    // Reset form
     setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   return (
-    <section className="contact-container">
+    <section id="contact" className="contact-container">
       <h2 className="section-title">Get In Touch</h2>
       <div className="contact-content">
         <div className="contact-info">
-          <h3>My Contact Details</h3>
+          <h3>Let's Work Together</h3>
+          <p>
+            I'm always interested in new opportunities and exciting projects.
+            Whether you have a project in mind or just want to chat about
+            technology, feel free to reach out!
+          </p>
 
           <div className="contact-item">
             <div className="icon">📧</div>
@@ -108,6 +111,20 @@ const Contact: React.FC = () => {
               </p>
             </div>
           </div>
+
+          <div className="social-links">
+            <a
+              href="https://twitter.com/jacob"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link twitter"
+            >
+              🐦
+            </a>
+            <a href="mailto:jacob@example.com" className="social-link email">
+              ✉️
+            </a>
+          </div>
         </div>
 
         <form className="contact-form" onSubmit={handleSubmit}>
@@ -152,10 +169,11 @@ const Contact: React.FC = () => {
             <textarea
               id="message"
               name="message"
+              rows={5}
               value={formData.message}
               onChange={handleChange}
               required
-            />
+            ></textarea>
           </div>
 
           <button type="submit" className="submit-button">

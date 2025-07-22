@@ -1,62 +1,60 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import "../css/Navigation.css";
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsOpen(false);
+  };
+
   return (
     <nav className="nav-container">
       <div className="nav-content">
-        <Link to="/" className="nav-logo">
+        <button onClick={() => scrollToSection("home")} className="nav-logo">
           Jacob Mammen Jacob
-        </Link>
+        </button>
         <div className={`nav-links ${isOpen ? "open" : ""}`}>
-          <Link to="/" className="nav-link" onClick={() => setIsOpen(false)}>
+          <button onClick={() => scrollToSection("home")} className="nav-link">
             HOME
-          </Link>
-          <Link
-            to="/about"
-            className="nav-link"
-            onClick={() => setIsOpen(false)}
-          >
+          </button>
+          <button onClick={() => scrollToSection("about")} className="nav-link">
             ABOUT
-          </Link>
-          <Link
-            to="/skills"
+          </button>
+          <button
+            onClick={() => scrollToSection("skills")}
             className="nav-link"
-            onClick={() => setIsOpen(false)}
           >
             SKILLS
-          </Link>
-          <Link
-            to="/experience"
+          </button>
+          <button
+            onClick={() => scrollToSection("experience")}
             className="nav-link"
-            onClick={() => setIsOpen(false)}
           >
             EXPERIENCE
-          </Link>
-          <Link
-            to="/education"
+          </button>
+          <button
+            onClick={() => scrollToSection("education")}
             className="nav-link"
-            onClick={() => setIsOpen(false)}
           >
             EDUCATION
-          </Link>
-          <Link
-            to="/projects"
+          </button>
+          <button
+            onClick={() => scrollToSection("projects")}
             className="nav-link"
-            onClick={() => setIsOpen(false)}
           >
             PORTFOLIO
-          </Link>
-          <Link
-            to="/contact"
+          </button>
+          <button
+            onClick={() => scrollToSection("contact")}
             className="nav-link"
-            onClick={() => setIsOpen(false)}
           >
             CONTACT
-          </Link>
+          </button>
         </div>
         <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
           ☰

@@ -1,11 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import backgroundImage from "../Jacob-portfolio-background.jpg";
 import "../css/Home.css";
 
 const Home: React.FC = () => {
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section
+      id="home"
       className="hero-container"
       style={
         {
@@ -18,10 +25,10 @@ const Home: React.FC = () => {
         <h1 className="hero-title">Jacob Mammen Jacob</h1>
         <h3 className="hero-subtitle">AND THIS IS MY RESUME</h3>
       </div>
-      <Link to="/about" className="scroll-indicator">
+      <button onClick={scrollToAbout} className="scroll-indicator">
         <span className="scroll-text">Scroll to explore</span>
         <div className="scroll-arrow"></div>
-      </Link>
+      </button>
     </section>
   );
 };
