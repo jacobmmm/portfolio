@@ -25,10 +25,10 @@ const Home: React.FC = () => {
         <h1 className="hero-title">Jacob Mammen Jacob</h1>
         <h3 className="hero-subtitle">AND THIS IS MY RESUME</h3>
       </div>
-      <button onClick={scrollToAbout} className="scroll-indicator">
+      {/* <button onClick={scrollToAbout} className="scroll-indicator">
         <span className="scroll-text">Scroll to explore</span>
         <div className="scroll-arrow"></div>
-      </button>
+      </button> */}
     </section>
   );
 };
