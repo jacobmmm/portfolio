@@ -32,7 +32,7 @@ const About: React.FC = () => {
               <h3>20+</h3>
               <p>Technologies</p>
             </div>
-          </div> */}
+          </div>*/}
         </div>
         <div className="about-image">
           <img src={profileImage} alt="Jacob Mammen" />

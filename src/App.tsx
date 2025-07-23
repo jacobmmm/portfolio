@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
@@ -12,20 +11,16 @@ import "./App.css";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/education" element={<Education />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="App">
+      <Navigation />
+      <Home />
+      <About />
+      <Skills />
+      <Experience />
+      <Education />
+      <Projects />
+      <Contact />
+    </div>
   );
 }
 
