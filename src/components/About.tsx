@@ -4,7 +4,7 @@ import profileImage from "../Jacob-portfolio-background.jpg";
 
 const About: React.FC = () => {
   return (
-    <section className="about-container">
+    <section id="about" className="about-container">
       <div className="about-content">
         <div className="about-text">
           <h2>About Me</h2>
