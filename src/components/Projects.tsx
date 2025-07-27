@@ -12,7 +12,7 @@ const Projects: React.FC = () => {
         "Built fullstack React/Node.js app with MongoDB and login/session handling.",
       tech: ["React", "NodeJS", "ExpressJS", "MongoDB"],
       icon: "💰",
-      liveUrl: "#",
+      liveUrl: "https://asset-finance-specialist-front-end.onrender.com/",
       frontendUrl:
         "https://github.com/jacobmmm/asset-finance-specialist-front-end/tree/main/asset-finance-specialist-front-end",
       backendUrl:
