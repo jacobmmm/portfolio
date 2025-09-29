@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
               <h4>LinkedIn</h4>
               <p>
                 <a
-                  href="https://linkedin.com/in/jacob"
+                  href="https://www.linkedin.com/in/jacob-mammen-jacob"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="contact-link"
@@ -79,7 +79,7 @@ const Contact: React.FC = () => {
               <h4>GitHub</h4>
               <p>
                 <a
-                  href="https://github.com/jacob"
+                  href="https://github.com/jacobmmm"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="contact-link"
